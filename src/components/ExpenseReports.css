@@ -1,0 +1,114 @@
+.report-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+  background: var(--surface-raised);
+  border-radius: 10px;
+}
+
+.report-tab {
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: background 0.15s, color 0.15s;
+}
+
+.report-tab.active {
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.year-chart {
+  height: 88px;
+}
+
+.year-chart .bar-day {
+  font-size: 0.55rem;
+}
+
+.year-finance {
+  font-size: 0.85rem;
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.year-finance .good {
+  color: var(--success);
+}
+
+.year-finance .over {
+  color: var(--danger);
+}
+
+.month-breakdown-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.month-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.65rem;
+  background: var(--surface-raised);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  text-align: left;
+  font-size: 0.85rem;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.month-row:not(:disabled):hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.month-row:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.month-row-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+}
+
+.month-amt {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.month-row-right small {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.month-empty {
+  color: var(--text-muted);
+}
+
+.report-hint {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.25rem;
+}

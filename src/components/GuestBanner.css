@@ -1,0 +1,59 @@
+.guest-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.guest-banner-text strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.guest-banner-text p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  max-width: 32rem;
+}
+
+.guest-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.guest-signin {
+  padding: 0.5rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+  color: var(--on-accent);
+  white-space: nowrap;
+}
+
+.guest-signin:disabled {
+  opacity: 0.7;
+}
+
+.guest-dismiss {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.guest-dismiss:hover {
+  background: var(--surface-raised);
+}

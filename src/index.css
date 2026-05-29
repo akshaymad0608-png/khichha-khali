@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0a0f1a;
+  --surface: #121a2e;
+  --surface-raised: #1a2540;
+  --border: rgba(148, 163, 184, 0.14);
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-secondary: #818cf8;
+  --accent-start: #2dd4bf;
+  --accent-end: #6366f1;
+  --accent-soft: rgba(45, 212, 191, 0.16);
+  --on-accent: #042f2e;
+  --danger: #fb7185;
+  --success: #4ade80;
+  --glow: rgba(45, 212, 191, 0.2);
+  --glow-secondary: rgba(99, 102, 241, 0.15);
+  --radius: 14px;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--glow), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%, var(--glow-secondary), transparent);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+select {
+  color: var(--text);
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+}
+
+/* Light theme */
+html[data-theme='light'] {
+  --bg: #eef2ff;
+  --surface: #ffffff;
+  --surface-raised: #f8fafc;
+  --border: rgba(71, 85, 105, 0.16);
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --accent: #0d9488;
+  --accent-secondary: #4f46e5;
+  --accent-start: #14b8a6;
+  --accent-end: #6366f1;
+  --accent-soft: rgba(13, 148, 136, 0.14);
+  --on-accent: #ffffff;
+  --danger: #e11d48;
+  --success: #16a34a;
+  --glow: rgba(20, 184, 166, 0.2);
+  --glow-secondary: rgba(99, 102, 241, 0.12);
+  --shadow: 0 8px 28px rgba(15, 23, 42, 0.1);
+}
+
+html[data-theme='light'] body {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--glow), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 100%, var(--glow-secondary), transparent);
+}
+
+html[data-theme='light'] select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+}
+
+/* Large text / touch targets */
+html[data-large='true'] {
+  font-size: 18px;
+}
+
+html[data-large='true'] input,
+html[data-large='true'] select,
+html[data-large='true'] .btn-primary,
+html[data-large='true'] .chip,
+html[data-large='true'] .fav-btn {
+  min-height: 3rem;
+  font-size: 1.05rem;
+}
+
+html[data-large='true'] .expense-item {
+  padding: 1rem;
+}
+
+html[data-large='true'] .btn-icon,
+html[data-large='true'] .btn-delete {
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.35rem;
+}

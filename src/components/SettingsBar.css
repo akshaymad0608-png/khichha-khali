@@ -1,0 +1,77 @@
+.settings-bar {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 1.25rem;
+}
+
+.setting-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  cursor: pointer;
+  padding: 0.35rem 0;
+}
+
+.setting-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.setting-box {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 1.35rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  position: relative;
+  margin-top: 0.15rem;
+  transition: background 0.2s;
+}
+
+.setting-box::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1rem;
+  height: 1rem;
+  background: var(--text-muted);
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.setting-toggle input:checked + .setting-box {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.setting-toggle input:checked + .setting-box::after {
+  transform: translateX(1.1rem);
+  background: var(--accent);
+}
+
+.setting-toggle strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.setting-toggle small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+@media (min-width: 640px) {
+  .settings-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,86 @@
+.onboard-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.onboard-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.onboard-card h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  text-align: center;
+  color: var(--accent);
+}
+
+.onboard-welcome {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.onboard-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.onboard-steps li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.onboard-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.onboard-steps strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.15rem;
+}
+
+.onboard-steps p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.onboard-actions {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.onboard-actions .btn-primary,
+.onboard-actions .btn-secondary {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.onboard-actions .btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.onboard-actions .btn-primary {
+  background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+  color: var(--on-accent);
+}
